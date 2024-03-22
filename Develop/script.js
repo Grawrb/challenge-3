@@ -31,11 +31,11 @@ function getEmployee() {
 }
 
 function getSalary(x) {
-  console.log("get salary", x)
+  
   if (isNaN(x)) {
     return 0;
   } else {
-    return x
+    return Number(x);
   }
   
 }
@@ -59,7 +59,8 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
-  console.log(employeesArray[Math.floor(Math.random() * employeesArray.length)]);
+  const randomEmployee = employeesArray[Math.floor(Math.random() * employeesArray.length)];
+  console.log(`${randomEmployee.firstName} ${randomEmployee.lastName}`);
 
 }
 
